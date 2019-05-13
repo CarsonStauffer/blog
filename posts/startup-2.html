@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<div class="flex-container">
+		<img src="../images/original/anchorman.png" class="banner">
+	</div>
+
+	<h1>Startup 2: Face Blurring</h1>
+
+	<p class="date">April 22, 2019</p>
+
+	<p>My second project is...over. I can't say finished because it isn't finished in even a remote sense of what I had in mind. I think the idea was good, but I wasn't able to pull it off. I'm cutting it off because I don't believe it has a future.</p>
+
+	<p>What was the idea? I wanted to build a tool that automatically detected faces in videos and blurred them out. I figured there were lots of people who could use this, estimating the homemade porn industry might be my first customers.</p>
+
+	<p>I finished a prototype. You can upload a video and it will use deep learning to detect faces and blur them out. You can then download your video with pixelated, impossible to identify faces! (I wanted to host publicly it so anybody could try it, but right now there are several ways to crash the server if you don't use the app correctly and I don't plan to fix them.) Here's an example of what it does, using a gif of Dwayne Johnson. Original video on the left, blurred video on the right.</p>
+
+	<video autoplay loop class="small-gif">
+	  <source src="../images/dwayne_clapping.webm" type="video/webm">
+	  Your browser does not support the video tag.
+	</video>
+	<video autoplay loop class="small-gif">
+		<source src="../images/dwayne_clapping_blurred.webm" type="video/webm">
+		Your browser does not support the video tag.
+	</video>
+
+	<p>Seems to work pretty well, right? In this case it does, but that doesn't always happen. Here is an example where it doesn't work so well:</p>
+
+	<video autoplay loop class="small-gif">
+		<source src="../images/dwayne_and_kevin.webm" type="video/webm">
+		Your browser does not support the video tag.
+	</video>
+	<video autoplay loop class="small-gif">
+		<source src="../images/dwayne_and_kevin_blurred.webm" type="video/webm">
+		Your browser does not support the video tag.
+	</video>
+
+	<p>What's going on here? The facial detection isn't perfect, and will sometimes miss faces, especially those that are poorly lit, at extreme angles, moving too quickly, or too far away. When Dwayne Johnson lowers his head, the deep learning model is no longer able to detect his face because of the extreme angle. It does even worse with Kevin Hart, only detecting his face for a few frames thanks to his thick glasses, the dark shadows, and his head being nearly sideways to the camera.</p>
+
+	<p>I am making the assumption that someone trying to blur out faces in a video needs them blurred out all of the time, not just some of the time. With that being the case, this is a very serious problem. And it is not an easy one to solve.</p>
+
+	<p>I could train a better face detection model, but this would be a monumental undertaking and could still never guarantee 100% accuracy. This means that fully automated face blurring is out of the picture. I could let you do the blurring manually, but that defeats the purpose of the project. Existing video editors have the ability to blur things manually. It would also be tons of work as I would have to basically build video editing software. This could not be done in a month or any amount of time I'm willing to spend.</p>
+
+	<p>After a few days' deliberation I have conceded that there is no reasonable solution to this issue. Perhaps there are people that could use imperfect face blurring, but I'm not really interested in the project anymore. This unsolvable problem is a show stopper.</p>
+
+	<p>I only have myself to blame for this. At the onset of this project, I spent a couple days researching if it was feasible. I knew that the face detection was imperfect, but told myself that I would solve that problem down the road. I got caught up in the excitement and started working. Technically, it could be done. An ideal product would probably do as much automatic face blurring as possible then allow the user to clean it up manually. This would achieve 100% anonymity and minimal work for the user, but doesn't achieve my original vision: fully automated face blurring in videos. And I'm not willing to put in extra effort to build something that doesn't fulfill that vision.</p>
+
+
+
+
+</body>
+
+
+</html>
