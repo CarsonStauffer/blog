@@ -35,6 +35,11 @@
   width: 25vw;
 }
 
+.small-image {
+  width: 50%;
+  height: 450px;
+  object-fit: cover;
+}
 
 p {
   margin: 30px 5vw;
